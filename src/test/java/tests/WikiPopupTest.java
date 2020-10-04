@@ -22,17 +22,18 @@ public class WikiPopupTest extends BaseClass {
 		action.clickAndHold().moveToElement(popup);
 		action.moveToElement(popup).perform();
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 10);//had to wait few seconds to get the pop up Text
 		WebElement element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//div[contains(@class,'mwe-popups-container')]/a[2]")));
+				.visibilityOfElementLocated(By.xpath("//div[contains(@class,'mwe-popups-container')]/a[2]"))); // Get the popup text
 		String actualText = element.getText();
 
 		String expectedText = "In ancient Greek civilization, Nike was a goddess who personified victory. Her Roman equivalent was Victoria.";
 		AssertJUnit.assertEquals(expectedText, actualText);
 		System.out.println(actualText);
+		
+		//in the _Personified concepts_, if you click on `Nike`, it takes you to a page that displays a family tree
 		popup.click(); // Click on the Nike Link from the Personified concepts section 
 
-		
 		WebElement familyTree = driver.findElement(By.xpath("//*[@id='Family_tree']"));
 
 		AssertJUnit.assertTrue(familyTree.isDisplayed()); //Verify Family Tree page is displayed
