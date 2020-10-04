@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Test Started Browser Opened]]>
+    </line>
+    <line>
+      <![CDATA[Test Finished Browser Closed]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="6955" started-at="2020-10-04T03:19:33Z" finished-at="2020-10-04T03:19:40Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="6955" started-at="2020-10-04T03:19:33Z" finished-at="2020-10-04T03:19:40Z">
+      <class name="tests.WikiMainPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.WikiMainPageTest@9f70c54]" name="setup" is-config="true" duration-ms="4496" started-at="2020-10-03T20:19:33Z" finished-at="2020-10-03T20:19:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started Browser Opened]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyMainPagetest()[pri:0, instance:tests.WikiMainPageTest@9f70c54]" name="verifyMainPagetest" duration-ms="2358" started-at="2020-10-03T20:19:37Z" finished-at="2020-10-03T20:19:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMainPagetest -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:tests.WikiMainPageTest@9f70c54]" name="closeApplication" is-config="true" duration-ms="94" started-at="2020-10-03T20:19:40Z" finished-at="2020-10-03T20:19:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Finished Browser Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- tests.WikiMainPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
