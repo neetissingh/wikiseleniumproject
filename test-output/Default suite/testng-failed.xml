@@ -5,6 +5,7 @@
     <classes>
       <class name="tests.WikiMainPageTest">
         <methods>
+          <include name="closeApplication"/>
           <include name="setup"/>
           <include name="verifyMainPagetest"/>
         </methods>
