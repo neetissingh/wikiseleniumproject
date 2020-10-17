@@ -1,0 +1,18 @@
+
+"Select Client__r.Id,Id,Client__r.Full_Client_SSN__c,Month_1_Min_Dollar__c,Remaining_Months_Min_Dollar__c, AMS_Month_1_Min_Dollar__c,AMS_Month_1_percent__c,Month_1_percent__c,Remaining_Months_percent__c,Estimated_Term__c,Name, Account_Number__c, Client_ID__c, Creditor__c, Current_Balance__c, Estimated_Settlement__c, Fees_Remaining__c from accounts__C where (Is_Active_Settlement__c = False  AND  (of_Completed_Settlements__c = NULL OR of_Completed_Settlements__c = 0 )AND Creditor__r.Inactive_creditor__c <> true) and Negotiation_Status__c = 'Active Negotiation' AND Collection_status__c !='LIT' AND Client__r.Total_Ongoing_STIPs__c > 0 and (NOT Client__r.CPlus_Lead_Phase__c LIKE '%4%') AND (NOT Client__r.CPlus_Lead_Phase__c = '') AND account_priority__c IN (2, 3, 4) and Creditor_Rank__c IN ('1', '2', '3', '4')  AND Settlement_Readiness__c =0 and (Month_1_percent__c!=0 and Remaining_Months_percent__c!=0 and Month_1_Min_Dollar__c!=0 and Remaining_Months_Min_Dollar__c!=0) and Client__r.First_Forecasted_Conflict__c = null AND id NOT IN (SELECT Account__c FROM Settlement__c WHERE include_in_forecaster__c = true OR status__c = 'In Process') AND Creditor__r.Check_By_Phone_Accepted__c = true and Meta_Current_Creditor_lookup__r.Meta_Creditor_Verified__c= true limit 1";
+
+
+
+/services/apexrest/RestBatchService/executeBatch?process=1099CSett&recordId=a067000001YiYMv
+Settlement Created --> https://fdrops--dev.my.salesforce.com/a0B05000000DH5y
+
+
+/services/apexrest/RestBatchService/executeBatch?process=StipSett&recordId=a0639000022hpnt
+Settlement Created --> https://fdrops--dev.my.salesforce.com/a0B05000000DH68
+
+/services/apexrest/RestBatchService/executeBatch?process=PaymentinFullSett&recordId=a0639000022ijcm
+Settlement created --> https://fdrops--dev.my.salesforce.com/a0B05000000DH6D
+
+
+/services/apexrest/RestBatchService/executeBatch?process=ZeroBalanceSett&recordId=a063p000025cr6q
+Settlement created --> https://fdrops--dev.my.salesforce.com/a0B05000000DH6I
